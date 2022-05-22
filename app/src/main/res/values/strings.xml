@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HomeMadeDrinks</string>
+    <string name="start">start</string>
+    <string name="back">back</string>
+    <string name="Recipe">Recipe</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Home">Home</string>
+    <string name="Calculate">Calculate</string>
+
+</resources>

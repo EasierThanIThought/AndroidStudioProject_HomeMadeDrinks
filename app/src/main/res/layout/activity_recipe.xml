@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--Edit text to enter course name-->
+
+    <!--edit text to enter course duration-->
+
+    <!--edit text to display course tracks-->
+
+
+    <!--button for adding new course-->
+
+    <EditText
+        android:id="@+id/idEdtDrinkName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtIngridients"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtIngridients"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idEdtIngridients"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <EditText
+        android:id="@+id/idEdtIngridients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:hint="Enter Ingridients"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtDescription"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtDescription"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idEdtDescription" />
+
+    <EditText
+        android:id="@+id/idEdtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:hint="Enter Description"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/idBtnAddDrink"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnAddDrink"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idBtnAddDrink" />
+
+    <Button
+        android:id="@+id/idBtnAddDrink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:text="Add to DB"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/idBtnViewAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="204dp"
+        android:text="View All"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_stroke_black95_press_white_woborders"
+        android:textColor="@color/black95"
+        app:itemIconTint="@color/black95"
+        app:itemTextColor="@color/black95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
