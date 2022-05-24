@@ -14,7 +14,7 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String DB_NAME = "drinksdb";
 
     // below int is our database version
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     // below variable is for our table name.
     private static final String TABLE_NAME = "recipes";
@@ -47,7 +47,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NAME_COL + " TEXT,"
                 + INGRIDIENTS_COL + " TEXT,"
-                + DESCRIPTION_COL + " TEXT)";
+                + DESCRIPTION_COL + " TEXT,"
+                + " UNIQUE (" + NAME_COL + ") ON CONFLICT REPLACE)";
 
         // at last we are calling a exec sql
         // method to execute above sql query

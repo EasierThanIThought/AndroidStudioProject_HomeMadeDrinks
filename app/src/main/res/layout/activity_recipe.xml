@@ -18,60 +18,59 @@
 
     <EditText
         android:id="@+id/idEdtDrinkName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="363dp"
+        android:layout_height="51dp"
         android:hint="Enter Name"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/idEdtIngridients"
-        app:layout_constraintEnd_toEndOf="@+id/idEdtIngridients"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/idEdtIngridients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.596" />
 
     <EditText
         android:id="@+id/idEdtIngridients"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_width="363dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="40dp"
         android:hint="Enter Ingridients"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/idEdtDescription"
-        app:layout_constraintEnd_toEndOf="@+id/idEdtDescription"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/idEdtDescription" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/idEdtDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_width="363dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="64dp"
         android:hint="Enter Description"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/idBtnAddDrink"
-        app:layout_constraintEnd_toEndOf="@+id/idBtnAddDrink"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/idBtnAddDrink" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/idBtnAddDrink"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
+        android:layout_width="293dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="272dp"
         android:text="Add to DB"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/idBtnViewAll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="204dp"
+        android:layout_width="293dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="196dp"
         android:text="View All"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

@@ -45,17 +45,17 @@ public class UpdateRecipeActivity extends AppCompatActivity {
         recipeIngrEdt.setText(recipeIngr);
         recipeDescriptionEdt.setText(recipeDesc);
 
-        // adding on click listener to our update course button.
+        // adding on click listener to our update button.
         updateRecipeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                // inside this method we are calling an update course
+                // inside this method we are calling an update
                 // method and passing all our edit text values.
                 dbHandler.updateRecipe(recipeName, recipeNameEdt.getText().toString(), recipeIngrEdt.getText().toString(),
                         recipeDescriptionEdt.getText().toString());
 
-                // displaying a toast message that our course has been updated.
+                // displaying a toast message that our recipe has been updated.
                 Toast.makeText(UpdateRecipeActivity.this, "Recipe Updated", Toast.LENGTH_SHORT).show();
 
                 // launching our main activity.
@@ -64,7 +64,7 @@ public class UpdateRecipeActivity extends AppCompatActivity {
             }
         });
 
-        // adding on click listener for delete button to delete our course.
+        // adding on click listener for delete button to delete our recipe.
         deleteRecipeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

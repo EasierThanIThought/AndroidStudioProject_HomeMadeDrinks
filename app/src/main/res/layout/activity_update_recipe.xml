@@ -1,52 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
     android:orientation="vertical"
     tools:context=".UpdateRecipeActivity">
 
     <!--Edit text to enter name-->
+
+    <!--edit text to enter duration-->
+
+    <!--edit text for description-->
+
+    <!--button for updating our course-->
+
+    <!--button for deleting our course-->
+
     <EditText
         android:id="@+id/idEdtRecipeName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter Recipe Name" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Enter Recipe Name"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtRecipeIngridients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--edit text to enter duration-->
     <EditText
         android:id="@+id/idEdtRecipeIngridients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter Recipe Ingridients" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="35dp"
+        android:hint="Enter Recipe Ingridients"
+        app:layout_constraintBottom_toTopOf="@+id/idEdtRecipeDescription"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeName"
+        app:layout_constraintStart_toStartOf="@+id/idEdtRecipeName"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeName" />
 
-    <!--edit text for description-->
     <EditText
         android:id="@+id/idEdtRecipeDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter Recipe Description" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="55dp"
+        android:hint="Enter Recipe Description"
+        app:layout_constraintBottom_toTopOf="@+id/idBtnUpdateRecipe"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeIngridients"
+        app:layout_constraintStart_toStartOf="@+id/idEdtRecipeIngridients"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeIngridients" />
 
-    <!--button for updating our course-->
     <Button
         android:id="@+id/idBtnUpdateRecipe"
-        android:layout_width="match_parent"
+        android:layout_width="293dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="178dp"
         android:text="Update Recipe"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/idBtnDelete"
+        app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeDescription"
+        app:layout_constraintStart_toStartOf="@+id/idEdtRecipeDescription"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeDescription" />
 
-    <!--button for deleting our course-->
     <Button
         android:id="@+id/idBtnDelete"
-        android:layout_width="match_parent"
+        android:layout_width="293dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="108dp"
         android:text="Delete Recipe"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnUpdateRecipe"
+        app:layout_constraintStart_toStartOf="@+id/idBtnUpdateRecipe"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnUpdateRecipe"
+        tools:ignore="MissingConstraints" />
 
-</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
