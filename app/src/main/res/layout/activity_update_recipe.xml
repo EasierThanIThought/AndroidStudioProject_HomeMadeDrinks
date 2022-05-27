@@ -9,15 +9,6 @@
     android:orientation="vertical"
     tools:context=".UpdateRecipeActivity">
 
-    <!--Edit text to enter name-->
-
-    <!--edit text to enter duration-->
-
-    <!--edit text for description-->
-
-    <!--button for updating our course-->
-
-    <!--button for deleting our course-->
 
     <EditText
         android:id="@+id/idEdtRecipeName"
@@ -29,6 +20,9 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="35dp"
         android:hint="Enter Recipe Name"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/idEdtRecipeIngridients"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +38,9 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="35dp"
         android:hint="Enter Recipe Ingridients"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/idEdtRecipeDescription"
         app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeName"
         app:layout_constraintStart_toStartOf="@+id/idEdtRecipeName"
@@ -59,6 +56,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="55dp"
         android:hint="Enter Recipe Description"
+        android:inputType="textCapSentences"
         app:layout_constraintBottom_toTopOf="@+id/idBtnUpdateRecipe"
         app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeIngridients"
         app:layout_constraintStart_toStartOf="@+id/idEdtRecipeIngridients"

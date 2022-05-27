@@ -65,29 +65,6 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
 
 
 
-        /*DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference userNameRef = rootRef.child("recipes").child("name");
-        ValueEventListener eventListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                if(!dataSnapshot.exists()) {
-                    dbHandler.addNewDrink("Martini Classic", "60ml vodka or gin; 1 tbsp dry vermouth; " +
-                            "olive or lemon peel", "Stir the gin or vodka, dry vermouth and a little ice " +
-                            "together or put them in a cocktail shaker to combine. Strain into a chilled martini glass. " +
-                            "Serve with an olive on a cocktail stick or a twist of lemon peel.");
-                    //create new user
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.d("Ok", databaseError.getMessage()); //Don't ignore errors!
-            }
-        };
-        userNameRef.addListenerForSingleValueEvent(eventListener);
-         */
-
-
         dbHandler.addNewDrink("Martini Classic", "60ml vodka or gin; 1 tbsp dry vermouth; " +
                         "olive or lemon peel", "Stir the gin or vodka, dry vermouth and a little ice " +
                 "together or put them in a cocktail shaker to combine. Strain into a chilled martini glass. " +
