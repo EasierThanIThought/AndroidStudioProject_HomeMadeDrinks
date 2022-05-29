@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        tools:context=".CalculateV2Activity">
+
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Water Alcohol Dilution Calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Calculator for mixing two alcohol-containing liquids"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/one"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Calculation of the parameters of sugar mash"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/two"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Replacing sugar with glucose or fructose"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/three"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Alcohol in Braga before and after fermentation"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/four"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Estimated output of moonshine and the volume of stillage"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/five"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Calculator of pure alcohol"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/six"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Optimal wort acidity"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seven"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Correction of hydrometer readings depending on temperature"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eight"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+
+            android:textSize="15sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
