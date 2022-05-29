@@ -41,7 +41,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
 
             case R.id.calculate:
-                intent = new Intent(HomeActivity.this,CalculateActivity.class);
+                intent = new Intent(HomeActivity.this,CalculateV2Activity.class);
                 startActivity(intent);
                 return true;
         }

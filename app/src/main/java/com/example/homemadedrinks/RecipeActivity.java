@@ -90,7 +90,7 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
                 "wedge of pineapple to garnish", "Pulse all the ingredients along with a handful of ice in a blender until smooth. Pour into a tall glass and garnish as you like.");
 
 
-        // below line is to add on click listener for our add course button.
+        // below line is to add on click listener for our add drink recipe button.
         AddDrinkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +111,7 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
                 }
 
                 // on below line we are calling a method to add new
-                // course to sqlite data and pass all our values to it.
+                // recipe to sqlite data and pass all our values to it.
                 dbHandler.addNewDrink(drinkName, drinkIngr, drinkDescription);
 
                 // after adding the data we are displaying a toast message.
@@ -151,7 +151,7 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
                 return true;
 
             case R.id.calculate:
-                intent = new Intent(RecipeActivity.this,CalculateActivity.class);
+                intent = new Intent(RecipeActivity.this,CalculateV2Activity.class);
                 startActivity(intent);
                 return true;
         }

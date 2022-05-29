@@ -14,7 +14,7 @@ public class UpdateRecipeActivity extends AppCompatActivity {
 
     // variables for our edit text, button, strings and dbhandler class.
     private EditText recipeNameEdt, recipeIngrEdt, recipeDescriptionEdt;
-    private Button updateRecipeBtn, deleteRecipeBtn;
+    private Button updateRecipeBtn, deleteRecipeBtn, goBackBtn;
     private DBHandler dbHandler;
     String recipeName, recipeIngr, recipeDesc;
 
@@ -29,6 +29,7 @@ public class UpdateRecipeActivity extends AppCompatActivity {
         recipeDescriptionEdt = findViewById(R.id.idEdtRecipeDescription);
         updateRecipeBtn = findViewById(R.id.idBtnUpdateRecipe);
         deleteRecipeBtn = findViewById(R.id.idBtnDelete);
+        goBackBtn = findViewById(R.id.idBtnBack);
 
         // on below line we are initialing our dbhandler class.
         dbHandler = new DBHandler(UpdateRecipeActivity.this);
@@ -68,9 +69,18 @@ public class UpdateRecipeActivity extends AppCompatActivity {
         deleteRecipeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // calling a method to delete our course.
+                // calling a method to delete
                 dbHandler.deleteRecipe(recipeName);
                 Toast.makeText(UpdateRecipeActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(UpdateRecipeActivity.this, ViewRecipes.class);
+                startActivity(i);
+            }
+        });
+
+        // 27.5.2022 go back btn
+        goBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent i = new Intent(UpdateRecipeActivity.this, ViewRecipes.class);
                 startActivity(i);
             }

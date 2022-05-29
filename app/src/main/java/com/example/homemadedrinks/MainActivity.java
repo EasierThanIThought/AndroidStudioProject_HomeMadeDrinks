@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
 
             case R.id.calculate:
-                intent = new Intent(MainActivity.this,CalculateActivity.class);
+                intent = new Intent(MainActivity.this,CalculateV2Activity.class);
                 startActivity(intent);
                 return true;
         }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.homemadedrinks">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,6 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HomeMadeDrinks">
         <activity
+            android:name=".BtnSecondCalculateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BtnFirstCalculateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalculateV2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".BtnAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
             android:name=".UpdateRecipeActivity"
             android:exported="false" />
         <activity
@@ -23,7 +37,8 @@
             android:exported="false" />
         <activity
             android:name=".RecipeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".CalculateActivity"
             android:exported="false" />

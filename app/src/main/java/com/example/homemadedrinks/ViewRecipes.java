@@ -5,7 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.inputmethod.EditorInfo;
+import android.widget.SearchView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,13 +43,13 @@ public class ViewRecipes extends AppCompatActivity implements BottomNavigationVi
         recipeModalArrayList = new ArrayList<>();
         dbHandler = new DBHandler(ViewRecipes.this);
 
-        // getting our course array
+        // getting our recipe array
         // list from db handler class.
         recipeModalArrayList = dbHandler.readRecipes();
 
         // on below line passing our array lost to our adapter class.
         recipeRVAdapter = new RecipeAdapter(recipeModalArrayList, ViewRecipes.this);
-        recipeRV = findViewById(R.id.idRVCourses);
+        recipeRV = findViewById(R.id.idRVRecipes);
 
         // setting layout manager for our recycler view.
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ViewRecipes.this, RecyclerView.VERTICAL, false);
@@ -73,11 +77,38 @@ public class ViewRecipes extends AppCompatActivity implements BottomNavigationVi
                 return true;
 
             case R.id.calculate:
-                intent = new Intent(ViewRecipes.this,CalculateActivity.class);
+                intent = new Intent(ViewRecipes.this,CalculateV2Activity.class);
                 startActivity(intent);
                 return true;
         }
         return false;
     }
 
+    //27.5.2022 search
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.search_menu, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                recipeRVAdapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
+
+        return true;
+    }
 }

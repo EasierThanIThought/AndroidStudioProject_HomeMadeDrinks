@@ -3,19 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_calculate.xml" value="0.1" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_calculate.xml" value="0.10666666666666667" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_recipe.xml" value="0.22" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_schedule.xml" value="0.1" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_update_recipe.xml" value="0.22" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_v2_calculate.xml" value="0.22" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_view_btn.xml" value="0.13179347826086957" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/activity_view_recipes.xml" value="0.22" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/add_new_recipe.xml" value="0.22" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/btnFirst_activity.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/btn_rv_item.xml" value="0.22" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/btnfirst_activity.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/btnsecond_activity.xml" value="0.22" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/list_item.xml" value="0.1" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/recipe_list.xml" value="0.1" />
-        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/recipe_rv_item.xml" value="0.22" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/recipe_rv_item.xml" value="0.1" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/layout/single_recipe.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/79221/AndroidStudioProjects/HomeMadeDrinks/app/src/main/res/menu/search_menu.xml" value="0.22" />
       </map>
     </option>
   </component>

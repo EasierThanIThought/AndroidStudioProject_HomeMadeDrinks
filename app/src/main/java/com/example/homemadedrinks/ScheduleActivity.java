@@ -41,7 +41,7 @@ public class ScheduleActivity extends AppCompatActivity implements BottomNavigat
                 return true;
 
             case R.id.calculate:
-                intent = new Intent(ScheduleActivity.this,CalculateActivity.class);
+                intent = new Intent(ScheduleActivity.this,CalculateV2Activity.class);
                 startActivity(intent);
                 return true;
         }

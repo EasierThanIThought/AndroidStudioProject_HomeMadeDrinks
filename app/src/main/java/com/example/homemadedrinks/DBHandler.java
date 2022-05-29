@@ -40,8 +40,7 @@ public class DBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // on below line we are creating
-        // an sqlite query and we are
-        // setting our column names
+        // an sqlite query and setting our column names
         // along with their data types.
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -82,7 +81,7 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
     }
 
-    // we have created a new method for reading all the courses.
+    // we have created a new method for reading all recipes.
     public ArrayList<RecipeModal> readRecipes() {
         // on below line we are creating a
         // database for reading our database.
@@ -124,7 +123,7 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put(DESCRIPTION_COL, recipeDescription);
 
         // on below line we are calling a update method to update our database and passing our values.
-        // and we are comparing it with name of our course which is stored in original name variable.
+        // and we are comparing it with name which is stored in original name variable.
         db.update(TABLE_NAME, values, "name=?", new String[]{originalRecipeName});
         db.close();
     }
@@ -138,7 +137,7 @@ public class DBHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         // on below line we are calling a method to delete our
-        // course and we are comparing it with our course name.
+        // recipe and we are comparing it with our recipe name.
         db.delete(TABLE_NAME, "name=?", new String[]{drinkName});
         db.close();
     }

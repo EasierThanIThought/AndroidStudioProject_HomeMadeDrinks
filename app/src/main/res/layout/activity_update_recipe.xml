@@ -10,6 +10,13 @@
     tools:context=".UpdateRecipeActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/main_background" />
+
     <EditText
         android:id="@+id/idEdtRecipeName"
         android:layout_width="match_parent"
@@ -26,7 +33,8 @@
         app:layout_constraintBottom_toTopOf="@+id/idEdtRecipeIngridients"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="24sp"/>
 
     <EditText
         android:id="@+id/idEdtRecipeIngridients"
@@ -44,7 +52,8 @@
         app:layout_constraintBottom_toTopOf="@+id/idEdtRecipeDescription"
         app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeName"
         app:layout_constraintStart_toStartOf="@+id/idEdtRecipeName"
-        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeName" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeName"
+        android:textSize="24sp"/>
 
     <EditText
         android:id="@+id/idEdtRecipeDescription"
@@ -60,7 +69,8 @@
         app:layout_constraintBottom_toTopOf="@+id/idBtnUpdateRecipe"
         app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeIngridients"
         app:layout_constraintStart_toStartOf="@+id/idEdtRecipeIngridients"
-        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeIngridients" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeIngridients"
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/idBtnUpdateRecipe"
@@ -76,7 +86,8 @@
         app:layout_constraintBottom_toTopOf="@+id/idBtnDelete"
         app:layout_constraintEnd_toEndOf="@+id/idEdtRecipeDescription"
         app:layout_constraintStart_toStartOf="@+id/idEdtRecipeDescription"
-        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdtRecipeDescription"
+        android:textSize="24sp"/>
 
     <Button
         android:id="@+id/idBtnDelete"
@@ -91,7 +102,24 @@
         app:layout_constraintEnd_toEndOf="@+id/idBtnUpdateRecipe"
         app:layout_constraintStart_toStartOf="@+id/idBtnUpdateRecipe"
         app:layout_constraintTop_toBottomOf="@+id/idBtnUpdateRecipe"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:textSize="24sp"/>
+
+    <Button
+        android:id="@+id/idBtnBack"
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="108dp"
+        android:text="Go back"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/idBtnDelete"
+        app:layout_constraintStart_toStartOf="@+id/idBtnDelete"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnDelete"
+        tools:ignore="MissingConstraints"
+        android:textSize="24sp"/>
 
 
 

@@ -13,6 +13,8 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -23,6 +25,13 @@ public class CalculateActivity extends AppCompatActivity implements BottomNaviga
     BottomNavigationView bottomNav;
 
     ArrayAdapter adapter;
+
+    // creating variables for our array list,
+    // dbhandler, adapter and recycler view.
+    private ArrayList<BtnModal> btnModalArrayList;
+    private DBHandlerForBtn dbHandlerForBtn;
+    private BtnAdapter btnAdapter;
+    private RecyclerView btnRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +44,35 @@ public class CalculateActivity extends AppCompatActivity implements BottomNaviga
         bottomNav.setSelectedItemId(R.id.calculate);
 
 
+        // initializing our all variables.
+        btnModalArrayList = new ArrayList<>();
+        dbHandlerForBtn = new DBHandlerForBtn(CalculateActivity.this);
+
+
+        dbHandlerForBtn.addNewBtn("Water Alcohol Dilution Calculator");
+        dbHandlerForBtn.addNewBtn("Calculator for mixing two alcohol-containing liquids");
+        dbHandlerForBtn.addNewBtn("Calculation of the parameters of sugar mash");
+        dbHandlerForBtn.addNewBtn("Replacing sugar with glucose or fructose");
+        dbHandlerForBtn.addNewBtn("Alcohol in Braga before and after fermentation");
+        dbHandlerForBtn.addNewBtn("Estimated output of moonshine and the volume of stillage");
+        dbHandlerForBtn.addNewBtn("Calculator of pure alcohol");
+        dbHandlerForBtn.addNewBtn("Optimal wort acidity");
+        dbHandlerForBtn.addNewBtn("Correction of hydrometer readings depending on temperature");
+
+        // getting our btn array
+        // list from db handler class.
+        btnModalArrayList = dbHandlerForBtn.readBtn();
+
+        // on below line passing our array lost to our adapter class.
+        btnAdapter = new BtnAdapter(btnModalArrayList, CalculateActivity.this);
+        btnRV = findViewById(R.id.idRVBTN);
+
+        // setting layout manager for our recycler view.
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(CalculateActivity.this, RecyclerView.VERTICAL, false);
+        btnRV.setLayoutManager(linearLayoutManager);
+
+        // setting our adapter to recycler view.
+        btnRV.setAdapter(btnAdapter);
 
     }
 
