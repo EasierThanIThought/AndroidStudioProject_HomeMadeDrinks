@@ -35,7 +35,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // inflating our layout file for recycler view items
+        // inflating layout file for recycler view items
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_rv_item, parent, false);
         return new ViewHolder(view);
     }
@@ -55,7 +55,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
                 // calling an intent
                 Intent i = new Intent(context, UpdateRecipeActivity.class);
 
-                // passing all our values
+                // passing all values
                 i.putExtra("name", modal.getDrinkName());
                 i.putExtra("ingridients", modal.getDrinkIngridients());
                 i.putExtra("description", modal.getDrinkDescription());

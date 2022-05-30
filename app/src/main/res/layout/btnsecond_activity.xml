@@ -30,41 +30,44 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/idperc1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
 
     <EditText
         android:id="@+id/idperc1"
         android:layout_width="363dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:hint="Enter liquid 1 alcohol %"
         android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/idvol2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/idvol2"
         android:layout_width="363dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="16dp"
         android:hint="Enter liquid 2 volume"
         android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/idperc2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/idperc2"
         android:layout_width="363dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="12dp"
         android:hint="Enter liquid 2 alcohol %"
         android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"

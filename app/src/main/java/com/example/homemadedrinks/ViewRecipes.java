@@ -104,8 +104,6 @@ public class ViewRecipes extends AppCompatActivity implements BottomNavigationVi
                 return false;
             }
         });
-
-
         return true;
     }
 }

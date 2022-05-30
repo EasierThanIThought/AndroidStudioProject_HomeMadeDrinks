@@ -13,10 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CalculateV2Activity extends AppCompatActivity {
 
-
     // creating variables
     private Button oneBtn, twoBtn, threeBtn, fourBtn, fiveBtn, sixBtn, sevenBtn, eightBtn, nineBtn;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

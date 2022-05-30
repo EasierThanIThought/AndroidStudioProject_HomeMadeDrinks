@@ -26,17 +26,17 @@
         android:layout_height="51dp"
         android:hint="Enter Name"
         android:minHeight="48dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/idEdtIngridients"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596"
-        android:textSize="24sp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/idEdtIngridients"
         android:layout_width="363dp"
         android:layout_height="51dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"
         android:hint="Enter Ingridients"
         android:minHeight="48dp"
@@ -49,13 +49,13 @@
         android:id="@+id/idEdtDescription"
         android:layout_width="363dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="36dp"
         android:hint="Enter Description"
         android:minHeight="48dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/idBtnAddDrink"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="24sp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/idBtnAddDrink"

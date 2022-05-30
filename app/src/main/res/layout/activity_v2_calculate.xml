@@ -17,7 +17,7 @@
 
         <Button
             android:id="@+id/one"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Water Alcohol Dilution Calculator"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
 
         <Button
             android:id="@+id/two"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculator for mixing two alcohol-containing liquids"
             android:layout_marginTop="20dp"
@@ -43,7 +43,7 @@
 
         <Button
             android:id="@+id/three"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculation of the parameters of sugar mash"
             android:layout_marginTop="20dp"
@@ -57,7 +57,7 @@
 
         <Button
             android:id="@+id/four"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Replacing sugar with glucose or fructose"
             android:layout_marginTop="20dp"
@@ -71,7 +71,7 @@
 
         <Button
             android:id="@+id/five"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Alcohol in Braga before and after fermentation"
             android:layout_marginTop="20dp"
@@ -83,7 +83,7 @@
 
         <Button
             android:id="@+id/six"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Estimated output of moonshine and the volume of stillage"
             android:layout_marginTop="20dp"
@@ -97,7 +97,7 @@
 
         <Button
             android:id="@+id/seven"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calculator of pure alcohol"
             android:layout_marginTop="20dp"
@@ -111,7 +111,7 @@
 
         <Button
             android:id="@+id/eight"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Optimal wort acidity"
             android:layout_marginTop="20dp"
@@ -125,7 +125,7 @@
 
         <Button
             android:id="@+id/nine"
-            android:layout_width="400dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Correction of hydrometer readings depending on temperature"
             android:layout_marginTop="20dp"
