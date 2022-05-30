@@ -20,8 +20,7 @@ import java.util.ArrayList;
 
 public class ViewRecipes extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    // creating variables for our array list,
-    // dbhandler, adapter and recycler view.
+    // creating variables for array list, dbhandler, adapter and recycler view
     private ArrayList<RecipeModal> recipeModalArrayList;
     private DBHandler dbHandler;
     private RecipeAdapter recipeRVAdapter;
@@ -38,24 +37,22 @@ public class ViewRecipes extends AppCompatActivity implements BottomNavigationVi
         bottomNav.setOnNavigationItemSelectedListener(this);
         bottomNav.setSelectedItemId(R.id.recipe);
 
-
-        // initializing our all variables.
+        // initializing all variables
         recipeModalArrayList = new ArrayList<>();
         dbHandler = new DBHandler(ViewRecipes.this);
 
-        // getting our recipe array
-        // list from db handler class.
+        // getting our recipe array list from db handler class
         recipeModalArrayList = dbHandler.readRecipes();
 
-        // on below line passing our array lost to our adapter class.
+        // passing array lost to adapter class
         recipeRVAdapter = new RecipeAdapter(recipeModalArrayList, ViewRecipes.this);
         recipeRV = findViewById(R.id.idRVRecipes);
 
-        // setting layout manager for our recycler view.
+        // setting layout manager for recycler view
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ViewRecipes.this, RecyclerView.VERTICAL, false);
         recipeRV.setLayoutManager(linearLayoutManager);
 
-        // setting our adapter to recycler view.
+        // setting adapter to recycler view
         recipeRV.setAdapter(recipeRVAdapter);
     }
 

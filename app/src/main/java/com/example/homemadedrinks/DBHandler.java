@@ -10,28 +10,19 @@ import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper {
     // creating a constant variables for our database.
-    // below variable is for our database name.
-    private static final String DB_NAME = "drinksdb";
 
-    // below int is our database version
-    private static final int DB_VERSION = 2;
+    private static final String DB_NAME = "drinksdb"; //variable for database name
 
-    // below variable is for our table name.
-    private static final String TABLE_NAME = "recipes";
+    private static final int DB_VERSION = 2; // database version
 
-    // below variable is for our id column.
-    private static final String ID_COL = "id";
+    private static final String TABLE_NAME = "recipes"; // variable for table name
 
-    // below variable is for name column
-    private static final String NAME_COL = "name";
+    private static final String ID_COL = "id"; //variable for id column
+    private static final String NAME_COL = "name"; // variable for name column
+    private static final String INGRIDIENTS_COL = "ingridients"; // variable for ingridients column
+    private static final String DESCRIPTION_COL = "description"; // variable for description column
 
-    // below variable id for ingridients column.
-    private static final String INGRIDIENTS_COL = "ingridients";
-
-    // below variable for description column.
-    private static final String DESCRIPTION_COL = "description";
-
-    // creating a constructor for our database handler.
+    // creating a constructor for the database handler
     public DBHandler(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -39,105 +30,88 @@ public class DBHandler extends SQLiteOpenHelper {
     // below method is for creating a database by running a sqlite query
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // on below line we are creating
-        // an sqlite query and setting our column names
-        // along with their data types.
+        // creating an sqlite query and setting all column names with their data types
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + NAME_COL + " TEXT,"
                 + INGRIDIENTS_COL + " TEXT,"
                 + DESCRIPTION_COL + " TEXT,"
                 + " UNIQUE (" + NAME_COL + ") ON CONFLICT REPLACE)";
-
-        // at last we are calling a exec sql
-        // method to execute above sql query
-        db.execSQL(query);
+        db.execSQL(query); // exec sql method to execute above sql query
     }
 
-    // this method is use to add new recipe to our sqlite database.
+    // this method is use to add new recipe to the sqlite database
     public void addNewDrink(String drinkName, String drinkIngridients, String drinkDescription) {
 
-        // on below line we are creating a variable for
-        // our sqlite database and calling writable method
-        // as we are writing data in our database.
+        // creation of a variable for sqlite database and call writable method as we are writing data in the database
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // on below line we are creating a
-        // variable for content values.
+        // variable for content values
         ContentValues values = new ContentValues();
 
-        // on below line we are passing all values
-        // along with its key and value pair.
+        // passing all values along with its key and value pair
         values.put(NAME_COL, drinkName);
         values.put(INGRIDIENTS_COL, drinkIngridients);
         values.put(DESCRIPTION_COL, drinkDescription);
 
-        // after adding all values we are passing
-        // content values to our table.
+        // after adding all values we are passing content values to the table
         db.insert(TABLE_NAME, null, values);
 
-        // at last we are closing our
-        // database after adding database.
+        //closing the database.
         db.close();
     }
 
-    // we have created a new method for reading all recipes.
+    // a new method for reading all recipes
     public ArrayList<RecipeModal> readRecipes() {
-        // on below line we are creating a
-        // database for reading our database.
+        // a database for reading existing database
         SQLiteDatabase db = this.getReadableDatabase();
 
-        // on below line we are creating a cursor with query to read data from database.
+        // creating a cursor with query to read data from database
         Cursor cursorRecipes = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
 
-        // on below line we are creating a new array list.
+        // creating a new array list
         ArrayList<RecipeModal> recipeModalArrayList = new ArrayList<>();
 
-        // moving our cursor to first position.
+        // moving cursor to first position
         if (cursorRecipes.moveToFirst()) {
             do {
-                // on below line we are adding the data from cursor to our array list.
+                // adding the data from cursor to the array list
                 recipeModalArrayList.add(new RecipeModal(cursorRecipes.getString(1),
                         cursorRecipes.getString(2),
                         cursorRecipes.getString(3)));
             } while (cursorRecipes.moveToNext());
-            // moving our cursor to next.
+            // moving cursor to next
         }
-        // at last closing our cursor
-        // and returning our array list.
+        // closing cursor and returning array list
         cursorRecipes.close();
         return recipeModalArrayList;
     }
 
-    // below is the method for updating our courses
+    // method for updating recipes
     public void updateRecipe(String originalRecipeName, String recipeName, String recipeDescription, String recipeIngridients) {
 
         // calling a method to get writable database.
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        // on below line we are passing all values
-        // along with its key and value pair.
+        // passing all values along with its key and value pair.
         values.put(NAME_COL, recipeName);
         values.put(INGRIDIENTS_COL, recipeIngridients);
         values.put(DESCRIPTION_COL, recipeDescription);
 
-        // on below line we are calling a update method to update our database and passing our values.
-        // and we are comparing it with name which is stored in original name variable.
+        // an update method to update existing database and passing our values, comparing it with name which is stored in original name variable
         db.update(TABLE_NAME, values, "name=?", new String[]{originalRecipeName});
         db.close();
     }
 
 
-    // below is the method for deleting our course.
+    // method for deleting recipe
     public void deleteRecipe(String drinkName) {
 
-        // on below line we are creating
-        // a variable to write our database.
+        // creating a variable to write the database
         SQLiteDatabase db = this.getWritableDatabase();
 
-        // on below line we are calling a method to delete our
-        // recipe and we are comparing it with our recipe name.
+        // calling a method to delete a recipe, comparing it with recipe name.
         db.delete(TABLE_NAME, "name=?", new String[]{drinkName});
         db.close();
     }

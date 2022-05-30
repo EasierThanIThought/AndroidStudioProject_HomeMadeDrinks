@@ -35,36 +35,32 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // on below line we are inflating our layout
-        // file for our recycler view items.
+        // inflating our layout file for recycler view items
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recipe_rv_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // on below line we are setting data
-        // to our views of recycler view item.
+        // setting data to views of recycler view item
         RecipeModal modal = recipeModalArrayList.get(position);
         holder.drinkNameTV.setText(modal.getDrinkName());
         holder.drinkIngrTV.setText(modal.getDrinkIngridients());
         holder.drinkDescTV.setText(modal.getDrinkDescription());
 
-        // below line is to add on click listener for our recycler view item.
+        // add on click listener for recycler view item
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                // on below line we are calling an intent.
+                // calling an intent
                 Intent i = new Intent(context, UpdateRecipeActivity.class);
 
-                // below we are passing all our values.
+                // passing all our values
                 i.putExtra("name", modal.getDrinkName());
                 i.putExtra("ingridients", modal.getDrinkIngridients());
                 i.putExtra("description", modal.getDrinkDescription());
 
-
-                // starting our activity.
+                // starting activity
                 context.startActivity(i);
             }
         });
@@ -72,18 +68,18 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        // returning the size of our array list
+        // returning the size of array list
         return recipeModalArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        // creating variables for our text views.
+        // creating variables for text views
         private TextView drinkNameTV, drinkIngrTV, drinkDescTV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            // initializing our text views
+            // initializing text views
             drinkNameTV = itemView.findViewById(R.id.idTVDrinkName);
             drinkIngrTV = itemView.findViewById(R.id.idTVDrinkIngridients);
             drinkDescTV = itemView.findViewById(R.id.idTVDrinkDescription);

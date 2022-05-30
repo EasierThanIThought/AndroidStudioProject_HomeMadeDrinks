@@ -18,7 +18,7 @@ public class BtnSecondCalculateActivity extends AppCompatActivity implements Bot
 
     BottomNavigationView bottomNav;
 
-    // creating variables for our edittext, button and dbhandler
+    // creating variables
     private EditText volume1Edt, perc1Edt, volume2Edt, perc2Edt;
     private TextView seeResTV;
     private Button calcBtn;
@@ -67,13 +67,6 @@ public class BtnSecondCalculateActivity extends AppCompatActivity implements Bot
 
                 String s = "Volume fraction of alcohol: " + String.valueOf(result) + "%.";
                 seeResTV.setText(s);
-
-                //volumeEdt.setText("");
-                //percBeforeEdt.setText("");
-                //percAfterEdt.setText("");
-
-                //seeResTV.setText("WHAT");
-
 
             }
         });

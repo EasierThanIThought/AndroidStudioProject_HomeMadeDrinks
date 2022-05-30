@@ -13,7 +13,7 @@
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/main_background" />
 
-    <!--recycler view for displaying our recipes-->
+    <!--recycler view for displaying recipes-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/idRVRecipes"
         android:layout_width="match_parent"

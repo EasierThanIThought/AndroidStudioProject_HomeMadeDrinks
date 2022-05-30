@@ -19,7 +19,7 @@ public class BtnFirstCalculateActivity extends AppCompatActivity implements Bott
 
     BottomNavigationView bottomNav;
 
-    // creating variables for our edittext, button and dbhandler
+    // creating variables
     private EditText volumeEdt, percBeforeEdt, percAfterEdt;
     private TextView seeResTV;
     private Button calcBtn;

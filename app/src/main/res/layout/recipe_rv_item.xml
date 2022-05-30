@@ -14,7 +14,7 @@
         android:layout_margin="3dp"
         android:orientation="vertical">
 
-        <!--text view for our drink name-->
+        <!--text view for drink name-->
         <TextView
             android:id="@+id/idTVDrinkName"
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <!--text view for our drink ingridients-->
+            <!--text view for drink ingridients-->
             <TextView
                 android:id="@+id/idTVDrinkIngridients"
                 android:layout_width="0dp"
@@ -42,7 +42,7 @@
 
         </LinearLayout>
 
-        <!--text view for our drink description-->
+        <!--text view for drink description-->
         <TextView
             android:id="@+id/idTVDrinkDescription"
             android:layout_width="match_parent"

@@ -1,12 +1,11 @@
 package com.example.homemadedrinks;
 
 public class RecipeModal {
-    // variables for our drinkname, ingridients and description, id.
+    // variables for drinkname, ingridients and description, id.
     private String drinkName;
     private String drinkIngr;
     private String drinkDescription;
     private int id;
-
     // creating getter and setter methods
     public String getDrinkName() {
         return drinkName;
@@ -28,9 +27,7 @@ public class RecipeModal {
         return drinkDescription;
     }
 
-    public void setDrinkDescription(String drinkDescription) {
-        this.drinkDescription = drinkDescription;
-    }
+    public void setDrinkDescription(String drinkDescription) { this.drinkDescription = drinkDescription; }
 
     public int getId() {
         return id;

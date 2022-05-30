@@ -36,7 +36,7 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
 
     BottomNavigationView bottomNav;
 
-    // creating variables for our edittext, button and dbhandler
+    // creating variables for edittext, button and dbhandler
     private EditText drinkNameEdt, drinkIngrEdt, drinkDescriptionEdt;
     private Button AddDrinkBtn, readRecipesBtn;
     private DBHandler dbHandler;
@@ -52,18 +52,15 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
         bottomNav.setOnNavigationItemSelectedListener(this);
         bottomNav.setSelectedItemId(R.id.recipe);
 
-        // initializing all our variables.
+        // initializing all variables
         drinkNameEdt = findViewById(R.id.idEdtDrinkName);
         drinkIngrEdt = findViewById(R.id.idEdtIngridients);
         drinkDescriptionEdt = findViewById(R.id.idEdtDescription);
         AddDrinkBtn = findViewById(R.id.idBtnAddDrink);
         readRecipesBtn = findViewById(R.id.idBtnViewAll);
 
-        // creating a new dbhandler class
-        // and passing our context to it.
+        // creating a new dbhandler class and passing context to it
         dbHandler = new DBHandler(RecipeActivity.this);
-
-
 
         dbHandler.addNewDrink("Martini Classic", "60ml vodka or gin; 1 tbsp dry vermouth; " +
                         "olive or lemon peel", "Stir the gin or vodka, dry vermouth and a little ice " +
@@ -89,18 +86,17 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
         dbHandler.addNewDrink("Piña colada", "120ml pineapple juice; 60ml white rum; 60ml coconut cream; " +
                 "wedge of pineapple to garnish", "Pulse all the ingredients along with a handful of ice in a blender until smooth. Pour into a tall glass and garnish as you like.");
 
-
-        // below line is to add on click listener for our add drink recipe button.
+        // to add on click listener for add drink recipe button
         AddDrinkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                // below line is to get data from all edit text fields.
+                // below line is to get data from all edit text fields
                 String drinkName = drinkNameEdt.getText().toString();
                 String drinkIngr = drinkIngrEdt.getText().toString();
                 String drinkDescription = drinkDescriptionEdt.getText().toString();
 
-                // validating if the text fields are empty or not.
+                // validating if the text fields are empty or not
                 if (drinkName.isEmpty() && drinkIngr.isEmpty() && drinkDescription.isEmpty()) {
                     Toast.makeText(RecipeActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
@@ -110,8 +106,7 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
                     return;
                 }
 
-                // on below line we are calling a method to add new
-                // recipe to sqlite data and pass all our values to it.
+                // calling a method to add new recipe to sqlite data and pass all our values to it
                 dbHandler.addNewDrink(drinkName, drinkIngr, drinkDescription);
 
                 // after adding the data we are displaying a toast message.
@@ -125,7 +120,7 @@ public class RecipeActivity extends AppCompatActivity implements BottomNavigatio
         readRecipesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // opening a new activity via a intent.
+                // opening a new activity via a intent
                 Intent i = new Intent(RecipeActivity.this, ViewRecipes.class);
                 startActivity(i);
             }
